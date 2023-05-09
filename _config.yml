@@ -1,55 +1,61 @@
 #
-# Sera - OnePage Jekyll Theme
 # Configuration File
 #
 
 # Information for compile
-exclude: ["Gemfile", "CNAME", "LICENSE", "README.md", "AUTHORING.md"]
+exclude:
+  - "Gemfile"
+  - "CNAME"
+  - "LICENSE"
+  - "*.md"
+  - "*.js"
+  - "*.json"
+  - "images/favicon/*.md"
+  - "images/favicon/*.html"
+  - "images/favicon/*.xml"
+
+# Plugins
+plugins:
+  - jekyll-sitemap
 
 # Sass configuration
 sass:
   sass_dir: _scss
+#  sourcemap: never
+
+# Collections
+collections_dir: _collections
+collections:
+  related_sites:
+    sort_by: order
+  team_owners:
+    sort_by: order
+    member_type: owner
 
 # Information for deploy
 baseurl: ""
 
 # the base hostname & protocol for your site
-url: "https://cocoacolorlab.ink"
+url: https://cocoacolorlab.ink
 
-####################################
-######   Optional Features    ######
-####################################
-smooth-scroll: false
+##
+## HEADER INFORMATION
+##
 
-####################################
-###########   Plugins    ###########
-####################################
-plugins:
-  - jekyll-archives
-
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layout: "archive"
-  permalinks:
-    category: "/category/:name/"
-    tag: "/tag/:name/"
-
-#######################################################
-#######################################################
-###############   HEADER INFORMATION   ###############
-#######################################################
-#######################################################
-
-# This is your site title
+# This is the site title
 title: Cocoa Color Lab Ink
+# This is the site description - must be between 25 and 160 characters for Bing SEO
+description: >
+  Custom artwork and tattoo services in the Cocoa, FL and Cocoa Beach, FL area.
+  Located at the Cocoa Color Lab.
+
 # Website language
 lang: en-US
 # Header Title
 header-title: Cocoa Color Lab Ink
 # Header Tagline
-header-tagline: Cocoa Color Lab Ink
+header-tagline1: Artistic Ink
+header-tagline2: Creative Body Art
 
 #
 # This is your email adress, contact from send here all emails from contact section
@@ -58,68 +64,27 @@ header-tagline: Cocoa Color Lab Ink
 #
 email: hello@cocoacolorlab.ink
 
-####################################
-######  Global Social Links   ######
-####################################
-facebook: "https://www.facebook.com/CocoaColorLab.ink/"
-instagram: "https://www.instagram.com/CocoaColorLab.ink/"
-tiktok: "https://www.tiktok.com/@CocoaColorLab.ink"
-youtube: "https://www.youtube.com/@CocoaColorLab.ink"
+##
+## Global Social Links
+##
+facebook: https://www.facebook.com/CocoaColorLab.ink/
+instagram: https://www.instagram.com/CocoaColorLab.ink/
+tiktok: https://www.tiktok.com/@CocoaColorLab.ink
+youtube: https://www.youtube.com/@CocoaColorLabInk
 
-#########################
-######   Widgets   ######
-#########################
+##
+## Global Images
+##
+facebook-image: /images/icons/facebook.svg
+instagram-image: /images/icons/instagram.svg
+tiktok-image: /images/icons/tiktok.svg
+youtube-image: /images/icons/youtube.svg
+linkedin-image: /images/icons/linkedin.svg
+email-image: /images/icons/email.svg
 
-#####################################
-#############   About   #############
-#####################################
-about-title: About Us
-about-description-short: Cocoa Color Lab Ink by Ray Cardillo.
-about-description-long: >
-  Ray Cardillo is a lifelong artist and creator and has started focusing on 3D sculpture and tattoo services.
-  More coming soon.
-
-#####################################
-############  Portfolio  ############
-#####################################
-portfolio-title: Related Sites
-portfolio-description: >
-  Click the images below to visit the site for each service.
-
-#
-# Portfolio Grid
-#
-portfolio-categories:
-  [Lisa, Ray]
-portfolio:
-  # Portfolio Item - Ink
-  - title: <span title="CocoaColorLab.Ink">C<span class="thin">ocoa</span>C<span class="thin">olor</span>L<span class="thin">ab</span>.I<span class="thin">nk</span></span>
-    categories: [Ray]
-    image: colorlab-ink-portfolio-image.png
-    info: Ray's tattoo services (this site)
-    url: "https://cocoacolorlab.ink"
-  # Portfolio Item - Art
-  - title: <span title="CocoaColorLab.Art">C<span class="thin">ocoa</span>C<span class="thin">olor</span>L<span class="thin">ab</span>.A<span class="thin">rt</span></span>
-    categories: [Ray]
-    image: colorlab-art-portfolio-image.png
-    info: Ray's art portfolio
-    url: "https://cocoacolorlab.art"
-  # Portfolio Item - Com
-  - title: <span title="CocoaColorLab.Art">C<span class="thin">ocoa</span>C<span class="thin">olor</span>L<span class="thin">ab</span>.C<span class="thin">om</span></span>
-    categories: [Lisa,Ray]
-    image: colorlab-com-portfolio-image.png
-    info: Main company website
-    url: "https://cocoacolorlab.com"
-  # Portfolio Item - Salon
-  - title: <span title="CocoaColorLab.Salon">C<span class="thin">ocoa</span>C<span class="thin">olor</span>L<span class="thin">ab</span>.S<span class="thin">alon</span></span>
-    categories: [Lisa]
-    image: colorlab-salon-portfolio-image.png
-    info: Lisa's hair salon services
-    url: "https://cocoacolorlab.salon"
-
-#####################################
-#############   Footer   ############
-#####################################
-footer-description: Cocoa Color Lab Ink is also on social media.
+##
+## Footer
+##
+footer-description: Find us on social media.
 footer-copyright-text: Cocoa Color Lab, LLC
 footer-copyright-year: 2023

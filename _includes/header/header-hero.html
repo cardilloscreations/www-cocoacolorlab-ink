@@ -1,0 +1,55 @@
+<header class="site-header hero-header" id="home" >
+
+  {%- comment %} Site Header Banner {% endcomment -%}
+  <div class="header-banner">
+
+    {% include header/hero-image.html %}
+
+    <div class="heading-content bg-transparent-black rounded-3">
+      {%- comment %} Heading Title {% endcomment -%}
+      <div class="heading-title">
+        <h1 >{{ site.header-title }}</h1>
+        <hr class="small">
+        <div class="heading-tagline">
+          <p class="h4">{{ site.header-tagline1 }}</p>
+          <p class="h4">{{ site.header-tagline2 }}</p>  
+        </div>
+      </div>
+      {%- comment %} Header Buttons {% endcomment -%}
+      <div class="heading-buttons d-grid gap-2 col-auto justify-content-center">
+        <a class="btn btn-light text-nowrap" href="tel:+1-321-621-2465">
+          CALL (321) 621-CINK
+        </a>
+        <button class="btn btn-light text-nowrap" type="button" data-container="body" data-bs-toggle="modal" data-bs-target="#bookingModal">
+          BOOK ONLINE
+        </button>                
+      </div>
+    </div>
+
+  </div>
+
+  {%- comment %} Arrow Down {% endcomment -%}
+  <div class="arrow-down-section">
+    <div class="wrapper-arrow child-center">
+      <a href="#about" aria-label="Skip header and go to next section" class="arrow-down">
+        <img src="{% link images/icons/down-arrow.svg %}" alt="Next Section" height="100" width="100" fetchpriority="high">
+      </a>
+    </div>
+  </div>
+
+</header>
+
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        Booking Feature Coming Soon!!
+      </div>
+      <div class="modal-footer">
+        <div class="container-fluid text-center">
+          <button type="button" class="btn btn-secondary ms-auto" data-bs-dismiss="modal" >OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+/**
+ *  Color Skin
+ **/
+
+// Global Pallete
+$white: #fff;
+$black: #000;
+$black-transparent: rgba($black, 0.9);
+$light-blue: #f4f8f9;
+
+// Light Color Scheme Areas
+$light-bg: $white;
+$light-primary: #404040;
+$light-secondary: #595959;
+$light-link-color: #3030B0;
+
+// Dark Color Scheme Areas
+$dark-bg: #222222;
+$dark-primary: #BBBBBB;
+$dark-secondary: #E0E0E0;
+
+// Sections Colors
+$section-bg: $white;
+$section-focus: $light-blue;
+
+// Navbar Colors
+$navbar-bg: $dark-bg;
+
+// Footer Colors
+$footer-bg-darker: $dark-bg;
+$footer-bg-lighter: lighten($dark-bg, 4%);
+$footer-primary: $dark-primary;
+$footer-secondary: $dark-secondary;
+
+$shadow-color: rgba(39, 36, 36, 0.1);
